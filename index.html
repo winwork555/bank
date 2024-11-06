@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Login</title>
+    
+    <!-- Google Font Kantumruy Pro -->
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- External CSS File -->
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <!-- Overlay for Background Image (Optional) -->
+    <div class="overlay"></div>
+    
+    <!-- Main Login Container -->
+    <div class="login-container">
+        <!-- Logo Section -->
+        <div class="logo">
+            <img src="image/logonew.png" alt="Bank Logo">
+        </div>
+
+        <!-- Language Selection Section -->
+        <div class="language-selection" id="language-selection">
+            <h2>Select Your Language</h2>
+            <div class="language-buttons">
+                <button onclick="selectLanguage('vi')">
+                    <img src="image/Vietnam.png" alt="Vietnamese Flag" class="flag-icon"> Vietnam
+                </button>
+                <button onclick="selectLanguage('en')">
+                    <img src="image/UK.png" alt="English Flag" class="flag-icon"> English
+                </button>
+                <button onclick="selectLanguage('km')">
+                    <img src="image/Cambodia.png" alt="Khmer Flag" class="flag-icon"> Khmer
+                </button>
+            </div>
+        </div>
+
+        <!-- Login Form Section -->
+        <div class="login-form" id="login-form" style="display: none;">
+            <h2 id="login-title">Login</h2>
+            <p id="greeting"></p>
+            <input type="text" id="username" placeholder="Username" required><br><br>
+            <input type="password" id="password" placeholder="Password" required><br><br>
+            
+            <!-- Show Password Toggle -->
+            <label>
+                <input type="checkbox" onclick="togglePassword()"> Show Password
+            </label><br><br>
+            
+            <!-- Login Button -->
+            <button onclick="validateLogin()">Login</button>
+            
+            <!-- Error Message -->
+            <p id="error-message" style="color: red;"></p>
+        </div>
+    </div>
+
+    <!-- External JavaScript File -->
+    <script src="javascript/login.js"></script>
+</body>
+</html>

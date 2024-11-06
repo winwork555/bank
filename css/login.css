@@ -1,0 +1,117 @@
+body {
+    font-family: 'Kantumruy Pro', sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../image/background_login.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    z-index: -1;
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    width: 320px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.logo img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.language-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.language-buttons button {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content horizontally */
+    gap: 10px;
+    width: 90%;
+    padding: 12px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    color: white;
+    background-color: #0073e6;
+    transition: background-color 0.3s ease;
+    text-align: center; /* Center text */
+}
+
+.language-buttons button:hover {
+    background-color: #005bb5;
+}
+
+.flag-icon {
+    width: 24px;
+    height: auto;
+    border-radius: 3px;
+}
+
+
+.login-form {
+    transition: opacity 0.5s ease;
+}
+
+.login-form h2 {
+    font-size: 1.5rem;
+    color: #004080;
+}
+
+.login-form input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.login-form button {
+    width: 90%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #004080;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+    background-color: #002a5c;
+}
+
+#error-message {
+    color: red;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
