@@ -33,14 +33,14 @@ function validateLogin() {
 
         // Redirect to the appropriate home page based on selected language
         if (selectedLanguage === 'vi') {
-            window.location.href = "/html/home.vn.html"; // Redirect to Vietnamese homepage
+            window.location.href = "html/home.vn.html"; // Redirect to Vietnamese homepage
         } else if (selectedLanguage === 'en') {
-            window.location.href = "/html/home.en.html"; // Redirect to English homepage
+            window.location.href = "html/home.en.html"; // Redirect to English homepage
         } else if (selectedLanguage === 'km') {
-            window.location.href = "/html/home.kh.html"; // Redirect to Khmer homepage
+            window.location.href = "html/home.kh.html"; // Redirect to Khmer homepage
         } else {
             // Default to English if no language is selected
-            window.location.href = "/html/home.en.html";
+            window.location.href = "html/home.en.html";
         }
     } else {
         // Display error message if login is invalid
